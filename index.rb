@@ -6,7 +6,5 @@ def opposite (num)
 
 #8-11-2020 "Counting Sheep" -Given an array where true means as sheep is present, count the number of sheep.
 def countSheeps array
-    array.select do |sheep|
-      sheep == true
-    end.length  
+    array.count(true)
 end
