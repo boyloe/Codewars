@@ -8,3 +8,8 @@ def opposite (num)
 def countSheeps array
     array.count(true)
 end
+
+#8-11-2020 "Dubstep"
+def song_decoder(song)
+    song.gsub(/(WUB)+/, ' ').strip
+  end
