@@ -13,3 +13,8 @@ end
 def song_decoder(song)
     song.gsub(/(WUB)+/, ' ').strip
   end
+
+#8-11-2020 "Is this a triangle"
+def isTriangle(a,b,c)
+    a+b>c && a + c > b && b + c > a ? true : false
+ end
