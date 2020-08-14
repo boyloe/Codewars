@@ -36,3 +36,8 @@ end
 def order(words)
     words.split.sort_by{ |w| w[/\d/] }.join(' ')
   end
+#08-14-2020 "Sum of positive"
+def positive_sum(arr)
+    arr != [] ? arr.select {|num| num > 0}.sum()  : 0
+end
+  
