@@ -40,4 +40,9 @@ def order(words)
 def positive_sum(arr)
     arr != [] ? arr.select {|num| num > 0}.sum()  : 0
 end
+
+#08-14-2020 "7kyu - Reverse Words"
+def reverse_words(str)
+    str.scan(/(\s*)(\S+)(\s*)/).map { |spacer1, word, spacer2| spacer1 + word.reverse + spacer2}.join
+end
   
