@@ -43,6 +43,11 @@ end
 
 #08-14-2020 "7kyu - Reverse Words"
 def reverse_words(str)
-    str.scan(/(\s*)(\S+)(\s*)/).map { |spacer1, word, spacer2| spacer1 + word.reverse + spacer2}.join
+    str.scan(/(\s*)(\S+)(\s*)/).map { |space1, word, space2| space1 + word.reverse + space2}.join
 end
   
+
+#08-17-2020 "7kyu - Two to one"
+def longest(a1, a2)
+    (a1.split("") + a2.split("")).uniq.sort.join("")
+end
