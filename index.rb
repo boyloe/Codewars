@@ -51,3 +51,18 @@ end
 def longest(a1, a2)
     (a1.split("") + a2.split("")).uniq.sort.join("")
 end
+
+#08-17-2020 "7kyu - Square every digit"
+def square_digits num
+  num_string = num.to_s.split("")
+  num_string.map do |digit|
+    (digit.to_i ** 2).to_s
+    binding.pry
+  end
+  num_string.join("").to_i
+end
+
+#better solution to Square every digit
+# def square_digits num
+#   num.to_s.chars.map{|x| x.to_i**2}.join.to_i
+# end
