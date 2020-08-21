@@ -85,7 +85,7 @@ def filter_list(l)
     new_list
 end
 
-#better solution 
+#better solution for 'List Filtering' from ryanbraganza
 def filter_list l
     l.reject { |x| x.is_a? String}
 end
