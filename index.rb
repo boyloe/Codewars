@@ -52,11 +52,6 @@ def longest(a1, a2)
     (a1.split("") + a2.split("")).uniq.sort.join("")
 end
 
-#08-18-2020 '6kyu - IQ Test
-def iq_test(numbers)
-    nums = numbers.split.map(&:to_i).map(&:even?)
-    nums.count(true) > 1 ? nums.index(false) + 1 : nums.index(true) + 1
-end
 
 #08-17-2020 "7kyu - Square every digit"
 def square_digits num
@@ -72,3 +67,25 @@ end
 # def square_digits num
 #   num.to_s.chars.map{|x| x.to_i**2}.join.to_i
 # end
+
+#08-18-2020 '6kyu - IQ Test
+def iq_test(numbers)
+    nums = numbers.split.map(&:to_i).map(&:even?)
+    nums.count(true) > 1 ? nums.index(false) + 1 : nums.index(true) + 1
+end
+
+#08-21-2020 '7kyu - List Filtering'
+def filter_list(l)
+    new_list = []
+        l.map do |item|
+            if item.class != String
+            new_list << item
+            end          
+        end 
+    new_list
+end
+
+#better solution 
+def filter_list l
+    l.reject { |x| x.is_a? String}
+end
