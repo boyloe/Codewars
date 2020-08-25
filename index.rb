@@ -92,17 +92,21 @@ end
 
 #08-25-2020 '6kyu - Title Case'
 def title_case(title, minor_words = "")
-minor_words_array = minor_words.split(' ')
-title_array = title.split(" ")
-title_array.map do |word|    
-    if !minor_words_array.include?(word) || title_array[0] 
-        word.capitalize
-        binding.pry
-    else 
-        word.downcase
-        binding.pry
+    minor_words_array = minor_words.split(' ').map do |word|
+      word.downcase
+    end        
+    title_array = title.split(" ").map do |word|
+      word.downcase
+    end  
+    titled = title_array.map do |word|    
+        if !minor_words_array.include?(word)||title_array.index(word)==0
+            word.capitalize        
+        else 
+            word.downcase        
+        end
+      end     
+      titled.join(" ")
+      binding.pry
     end
-    end
-end
 
-title_case('a clash of KINGS','a an the of')
+title_case('THE WIND IN THE WILLOWS','a an the of')
