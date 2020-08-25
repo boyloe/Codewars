@@ -89,3 +89,20 @@ end
 def filter_list l
     l.reject { |x| x.is_a? String}
 end
+
+#08-25-2020 '6kyu - Title Case'
+def title_case(title, minor_words = "")
+minor_words_array = minor_words.split(' ')
+title_array = title.split(" ")
+title_array.map do |word|    
+    if !minor_words_array.include?(word) || title_array[0] 
+        word.capitalize
+        binding.pry
+    else 
+        word.downcase
+        binding.pry
+    end
+    end
+end
+
+title_case('a clash of KINGS','a an the of')
