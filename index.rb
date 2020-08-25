@@ -92,6 +92,9 @@ end
 
 #08-25-2020 '6kyu - Title Case'
 def title_case(title, minor_words = "")
+    if title == nil
+        return nil
+    else    
     minor_words_array = minor_words.split(' ').map do |word|
       word.downcase
     end        
@@ -99,14 +102,16 @@ def title_case(title, minor_words = "")
       word.downcase
     end  
     titled = title_array.map do |word|    
-        if !minor_words_array.include?(word)||title_array.index(word)==0
+        if !minor_words_array.include?(word)
             word.capitalize        
         else 
             word.downcase        
         end
-      end     
+      end 
+      titled[0] = titled[0].capitalize    
       titled.join(" ")
       binding.pry
     end
+end
 
-title_case('THE WIND IN THE WILLOWS','a an the of')
+title_case('THE WIND IN THE WILLOWS','The In')
