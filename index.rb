@@ -114,4 +114,14 @@ def title_case(title, minor_words = "")
     end
 end
 
-title_case('THE WIND IN THE WILLOWS','The In')
+#better solution for '6kyu - Title Case' given by zishe and others
+def title_case(title, minor_words = '')
+    title.capitalize.split().map{|a| minor_words.downcase.split().include?(a) ? a : a.capitalize}.join(' ')
+end
+
+#08-26-2020 "7kyu - You're a Square"
+def is_square(x)
+x < 0 ? false : Math.sqrt(x) % 1 == 0
+    
+end
+
