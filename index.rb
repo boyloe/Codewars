@@ -125,3 +125,9 @@ x < 0 ? false : Math.sqrt(x) % 1 == 0
     
 end
 
+#08-26-2020 "7kyu - Exes and Ohs"
+def XO(str)
+    exes = str.downcase.count('x')
+    ohs = str.downcase.count('o')
+    exes == ohs ? true : false
+end
