@@ -29,11 +29,12 @@ let moveZeros = function (arr) {
     new_arr = []
     zero_arr = []
     for(let i = 0;i<arr.length;i++){
-      if(arr[i] != 0){
+      if(arr[i] !== 0){
         new_arr.push(arr[i])
-        zero_arr.push(0)
-    }
-    new_arr.push(...zero_arr)
-    return new_arr
+    } else {
+      zero_arr.push(0)
+    }   
+  }
+     new_arr.push(...zero_arr)
+     return new_arr
   }  
-}  
