@@ -22,5 +22,18 @@ function openOrSenior(data){
   })
   return membership
 }
-let test1 = [[57,12],[54, 12], [59,6]]
-console.log(openOrSenior(test1));
+
+//08-31-2020 '5kyu - Moving Zeroes to the End'
+let moveZeros = function (arr) {
+    console.log(arr)
+    new_arr = []
+    zero_arr = []
+    for(let i = 0;i<arr.length;i++){
+      if(arr[i] != 0){
+        new_arr.push(arr[i])
+        zero_arr.push(0)
+    }
+    new_arr.push(...zero_arr)
+    return new_arr
+  }  
+}  
