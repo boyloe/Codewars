@@ -38,3 +38,26 @@ let moveZeros = function (arr) {
      new_arr.push(...zero_arr)
      return new_arr
   }  
+
+
+// 09-03-2020 "6kyu - Are they the 'same'?"  
+function comp(array1, array2){
+  let status = true
+  const sqArr = array1.map(number => number*number).sort()
+  const sortArr2 = array2.sort()
+  for(let i = 0; i<array1.length;i++){
+    if(sqArr[i] == sortArr2[i]){
+      status = true
+      console.log(sqArr[i],sortArr2[i])
+    }else{
+      console.log(sqArr[i],sortArr2[i])
+      return false
+    }    
+  } 
+  return array1,array2,status  
+}
+
+//clever solution to "Are they the same" by omiceron
+function comp(a, b) {
+  return !!a && !!b && a.map(x => x*x).sort().join() == b.sort().join();
+}
