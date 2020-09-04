@@ -61,3 +61,22 @@ function comp(array1, array2){
 function comp(a, b) {
   return !!a && !!b && a.map(x => x*x).sort().join() == b.sort().join();
 }
+
+//09-04-2020 "6kyu - Array.diff"
+function arrayDiff(a,b) {
+  if (b === undefined || a === undefined) {
+    return a;
+  }
+  
+  let diffArr = [];
+  let merged = a.concat(b);
+  
+  merged.forEach(function(number) {
+    if (!b.includes(number)) {
+      diffArr.push(number);
+    }
+  })  
+  return diffArr;
+}
+
+
