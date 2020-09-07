@@ -79,4 +79,18 @@ function arrayDiff(a,b) {
   return diffArr;
 }
 
+//09-06-2020 "6 kyu-Build a Pile of Cubes"
+function findNb(m) {
+  let volume = 0
+  for(n=1;volume<m;n++){
+    volume += n**3
+  }
+  if(volume == m){
+    return n-1
+  }else{
+  return (-1);
+  }  
+}
+
+
 
