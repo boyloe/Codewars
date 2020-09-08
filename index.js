@@ -110,4 +110,8 @@ function rot13(message){
   return encodedMessageArr.join("")
 }
 
-
+//Clever solution to "5 kyu Rot13" by Paul Calvelage
+function rot13(message) {
+  var abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+  return message.replace(/[a-z]/gi, c => abc[abc.indexOf(c) + 13]);
+}
