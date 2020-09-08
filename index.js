@@ -79,7 +79,7 @@ function arrayDiff(a,b) {
   return diffArr;
 }
 
-//09-06-2020 "6 kyu-Build a Pile of Cubes"
+//09-07-2020 "6 kyu-Build a Pile of Cubes"
 function findNb(m) {
   let volume = 0
   for(n=1;volume<m;n++){
@@ -92,5 +92,22 @@ function findNb(m) {
   }  
 }
 
+//09-08-2020 "5 kyu-Rot13"
+function rot13(message){
+  const alpha = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const alphaArr = alpha.split("")
+  const messageArr = message.split("")
+  const encodedMessageArr = []
+  for(i=0;i<messageArr.length;i++){
+    if(alphaArr.includes(messageArr[i])){
+      alphaIndex = alphaArr.findIndex(letter => letter == messageArr[i])
+      let encodedLetter = alphaArr[alphaIndex + 13]
+      encodedMessageArr.push(encodedLetter)
+    }else{
+      encodedMessageArr.push(messageArr[i])
+    }
+  }
+  return encodedMessageArr.join("")
+}
 
 
