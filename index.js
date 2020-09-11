@@ -115,3 +115,39 @@ function rot13(message) {
   var abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
   return message.replace(/[a-z]/gi, c => abc[abc.indexOf(c) + 13]);
 }
+
+////09-08-2020 "6 kyu-Buying a Car"
+// function nbMonths(startPriceOld, startPriceNew, savingPerMonth, percentLossByMonth){
+//   if(startPriceOld >= startPriceNew){
+//     return [0, startPriceOld - startPriceNew]
+//   }else{
+//     let priceO = startPriceOld
+//     let priceN = startPriceNew
+//     let availableCapital = startPriceOld
+//     for(i=0;availableCapital<priceN;i++){
+//       depreciationOld = priceO * (percentLossByMonth/100)
+//       console.log({depreciationOld})
+//       priceO -= depreciationOld
+//       console.log({priceO})
+//       console.log({priceN})
+//       depreciationNew = priceN * (percentLossByMonth/100)
+//       console.log({depreciationNew})
+//       availableCapital += (savingPerMonth -depreciationOld)
+//       priceN -= depreciationNew
+      
+//       console.log({availableCapital})
+//     }
+//     return [i, availableCapital - priceN]
+//   }
+// }
+
+// console.log(nbMonths(2000,8000,1000,1.5))
+
+function high(x){
+  const xArr = x.split(' ')
+  const alpha = 'abcdefghijklmnopqrstuvwxyz'
+  const alphaArr = alpha.split('')
+  console.log({xArr})
+  }
+
+  high('what time are we climbing up the volcano')
