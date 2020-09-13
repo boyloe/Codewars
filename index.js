@@ -143,11 +143,9 @@ function rot13(message) {
 
 // console.log(nbMonths(2000,8000,1000,1.5))
 
-function high(x){
-  const xArr = x.split(' ')
-  const alpha = 'abcdefghijklmnopqrstuvwxyz'
-  const alphaArr = alpha.split('')
-  console.log({xArr})
-  }
+function duplicateCount(text){
+  text.split("")
+  
+}
 
-  high('what time are we climbing up the volcano')
+duplicateCount("aabBcde")
