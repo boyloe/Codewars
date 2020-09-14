@@ -143,9 +143,11 @@ function rot13(message) {
 
 // console.log(nbMonths(2000,8000,1000,1.5))
 
-function duplicateCount(text){
-  text.split("")
-  
-}
+//09/14/2020 6kyu-Array Helpers
+Array.prototype.square = function () {return this.map(n =>  n*n)}
+Array.prototype.cube = function () {return this.map(n =>  n*n*n)}
+Array.prototype.square = function () {return this.map(n =>  n*n)}
+Array.prototype.square = function () {return this.map(n =>  n*n)}
+Array.prototype.square = function () {return this.map(n =>  n*n)}
+Array.prototype.square = function () {return this.map(n =>  n*n)}
 
-duplicateCount("aabBcde")
