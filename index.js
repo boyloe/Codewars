@@ -146,8 +146,8 @@ function rot13(message) {
 //09/14/2020 6kyu-Array Helpers
 Array.prototype.square = function () {return this.map(n =>  n*n)}
 Array.prototype.cube = function () {return this.map(n =>  n*n*n)}
-Array.prototype.square = function () {return this.map(n =>  n*n)}
-Array.prototype.square = function () {return this.map(n =>  n*n)}
-Array.prototype.square = function () {return this.map(n =>  n*n)}
-Array.prototype.square = function () {return this.map(n =>  n*n)}
+Array.prototype.average = function () {return this.reduce(acc, currentValue =>  acc + currentValue)/this.length}
+Array.prototype.sum = function () {return this.map(n =>  n*n)}
+Array.prototype.even = function () {return this.map(n =>  n*n)}
+Array.prototype.odd = function () {return this.map(n =>  n*n)}
 
