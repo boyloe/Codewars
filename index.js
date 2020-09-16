@@ -144,10 +144,11 @@ function rot13(message) {
 // console.log(nbMonths(2000,8000,1000,1.5))
 
 //09/14/2020 6kyu-Array Helpers
-Array.prototype.square = function () {return this.map(n =>  n*n)}
 Array.prototype.cube = function () {return this.map(n =>  n*n*n)}
-Array.prototype.average = function () {return this.reduce(acc, currentValue =>  acc + currentValue)/this.length}
-Array.prototype.sum = function () {return this.reduce(acc, current =>  acc + current)}
-Array.prototype.even = function () {return this.map(n =>  n % 2 == 0)}
-Array.prototype.odd = function () {return this.map(n =>  n % 2!=)}
-
+function sumArray(total, value){
+  return total + value
+}
+Array.prototype.average = function () {return this.reduce(sumArray,0)/this.length}
+Array.prototype.sum = function () {return this.reduce(sumArray,0)}
+Array.prototype.even = function () {return this.filter(n =>  n % 2 === 0)}
+Array.prototype.odd = function () {return this.filter(n =>  n % 2 !== 0)}
