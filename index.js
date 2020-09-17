@@ -145,8 +145,8 @@ function rot13(message) {
 
 //09/14/2020 6kyu-Array Helpers
 Array.prototype.cube = function () {return this.map(n =>  n*n*n)}
-function sumArray(total, value){
-  return total + value
+function sumArray(sum, value){
+  return sum + value
 }
 Array.prototype.average = function () {return this.reduce(sumArray,0)/this.length}
 Array.prototype.sum = function () {return this.reduce(sumArray,0)}
