@@ -152,3 +152,8 @@ Array.prototype.average = function () {return this.reduce(sumArray,0)/this.lengt
 Array.prototype.sum = function () {return this.reduce(sumArray,0)}
 Array.prototype.even = function () {return this.filter(n =>  n % 2 === 0)}
 Array.prototype.odd = function () {return this.filter(n =>  n % 2 !== 0)}
+
+//09/18/2020 6kyu-Give Me a Diamond
+function diamond(size){
+  
+}
