@@ -22,3 +22,22 @@ export class Kata {
         return spunArr.join(' ')
     }
 }
+
+//11-12-2020 'Tribonacci Sequence'
+export function tribonacci([a, b, c]: [number, number, number], n: number): number[] {
+    if (n !== 0 && n > 2){
+        let currentTrib:number = 0
+        let sequenceArr: number[] = [a,b,c]
+        for ( let i:number = 2; i <= n-2; i++ ) {
+            currentTrib = sequenceArr[i] + sequenceArr[i-1] + sequenceArr[i-2]
+            sequenceArr.push(currentTrib)  
+        }
+        return sequenceArr     
+        } else if (n === 1) {
+            return [a]
+        } else if ( n === 2 ) {
+        return [a, b]
+        } else {
+        return []
+        }
+}
