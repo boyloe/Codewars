@@ -41,3 +41,8 @@ export function tribonacci([a, b, c]: [number, number, number], n: number): numb
         return []
         }
 }
+
+//11-13-2020 'Fold an Array'
+export function foldArray(array:number[], runs:number):number[] {
+return [0]
+}
