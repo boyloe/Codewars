@@ -57,3 +57,22 @@ export function foldArray(array:number[], runs:number):number[] {
     }
     return foldedArray
 }
+
+export function sumFibs(num:number):number {
+    let start:number = 0;
+    let next:number = 1;
+    let current:number;
+    let sumOdd:number = 0;
+    for (let i:number = 0; i <= num; i++){
+        current = start + next;
+        start = next;
+        next = current;
+        console.log(current);
+        if (current % 2 !== 0 && current <= num){
+        sumOdd = current + sumOdd; 
+        }
+    }
+    return sumOdd + 1;
+    }
+
+    console.log(sumFibs(10000))
