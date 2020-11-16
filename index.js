@@ -66,7 +66,6 @@ function foldArray(array, runs) {
     if (runs > 1) {
         return foldArray(foldedArray, runs - 1);
     }
-    console.log(foldedArray);
     return foldedArray;
 }
 exports.foldArray = foldArray;
