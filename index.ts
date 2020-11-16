@@ -44,7 +44,20 @@ export function tribonacci([a, b, c]: [number, number, number], n: number): numb
 
 //11-13-2020 'Fold an Array'
 export function foldArray(array:number[], runs:number):number[] {
-return [0]
+    let foldedArray:number[] = []
+    let newArray:number[] = array.slice()
+    while (newArray.length > 1) {
+        foldedArray.push(newArray[0] + newArray[newArray.length-1])
+        newArray = newArray.slice(1, newArray.length-1)
+    }
+    if (newArray.length > 0) {
+        foldedArray.push(newArray[0])
+    } if (runs > 1) {
+        return foldArray(foldedArray, runs - 1)
+    }
+    return foldedArray
 }
 
 const array:number[] = [1,2,3,4,5]
+
+foldArray(array, 2)
