@@ -46,3 +46,5 @@ export function tribonacci([a, b, c]: [number, number, number], n: number): numb
 export function foldArray(array:number[], runs:number):number[] {
 return [0]
 }
+
+const array:number[] = [1,2,3,4,5]
