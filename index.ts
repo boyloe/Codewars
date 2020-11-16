@@ -57,7 +57,3 @@ export function foldArray(array:number[], runs:number):number[] {
     }
     return foldedArray
 }
-
-const array:number[] = [1,2,3,4,5]
-
-foldArray(array, 2)
