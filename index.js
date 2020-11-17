@@ -87,4 +87,3 @@ function sumFibs(num) {
     return sumOdd + 1;
 }
 exports.sumFibs = sumFibs;
-
