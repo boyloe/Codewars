@@ -131,4 +131,3 @@ const testString1 = '({[]})'
 //Should return false
 const testString2 = '(({[]{]}))'
 
-console.log(balancedParanthesis(testString2))
