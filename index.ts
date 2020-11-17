@@ -72,7 +72,6 @@ export function sumFibs(num:number):number {
         sumOdd = current + sumOdd; 
         }
     }
+    console.log(sumOdd)
     return sumOdd + 1;
     }
-
-    console.log(sumFibs(10000))

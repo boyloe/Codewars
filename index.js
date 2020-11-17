@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
+exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
 //11-10-2020 'Find the smallest integer 
 function findSmallestInt(args) {
     return args.sort(function (a, b) { return a - b; })[0];
@@ -69,5 +69,22 @@ function foldArray(array, runs) {
     return foldedArray;
 }
 exports.foldArray = foldArray;
-var array = [1, 2, 3, 4, 5];
-foldArray(array, 2);
+function sumFibs(num) {
+    var start = 0;
+    var next = 1;
+    var current;
+    var sumOdd = 0;
+    for (var i = 0; i <= num; i++) {
+        current = start + next;
+        start = next;
+        next = current;
+        console.log(current);
+        if (current % 2 !== 0 && current <= num) {
+            sumOdd = current + sumOdd;
+        }
+    }
+    console.log(sumOdd);
+    return sumOdd + 1;
+}
+exports.sumFibs = sumFibs;
+
