@@ -1,4 +1,7 @@
 "use strict";
+
+const { syncBuiltinESMExports } = require("module");
+
 exports.__esModule = true;
 exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
 //11-10-2020 'Find the smallest integer 
@@ -105,3 +108,27 @@ const decToBin = (num) => {
     const trimmedArray = binaryArray.slice(firstOneIndex)
     return trimmedArray.join('')
 }
+
+
+function balancedParanthesis (string) {
+    let symbolArray = []
+    const stringArr = string.split('')
+    stringArr.forEach(character => {
+        if (character === '(' || character ==='{' || character === '['){
+            symbolArray.push(character)
+        } else if (character === ')' && symbolArray[symbolArray.length-1] === '(') {
+            symbolArray.pop()
+        } else if (character === ']' && symbolArray[symbolArray.length-1] === '[') {
+            symbolArray.pop()
+        } else if (character === '}' && symbolArray[symbolArray.length-1] === '{') {
+            symbolArray.pop()
+        } 
+    })
+    return symbolArray.length === 0
+}
+//Should return true
+const testString1 = '({[]})'
+//Should return false
+const testString2 = '(({[]{]}))'
+
+console.log(balancedParanthesis(testString2))
