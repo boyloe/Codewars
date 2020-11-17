@@ -87,3 +87,21 @@ function sumFibs(num) {
     return sumOdd + 1;
 }
 exports.sumFibs = sumFibs;
+
+//max 2 ^ 16 = 65536
+const decToBin = (num) => {
+    let binaryArray = []
+    for (let i = 16; i >= 0; i--) {
+        if (num >= 2 ** i && num !==0) {
+            num -= 2 ** i
+            binaryArray.push(1)
+        } else if (num === 0){
+            binaryArray.push(0)
+        } else {
+            binaryArray.push(0)
+        }
+    }
+    const firstOneIndex = binaryArray.findIndex(number => number === 1)
+    const trimmedArray = binaryArray.slice(firstOneIndex)
+    return trimmedArray.join('')
+}

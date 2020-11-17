@@ -75,3 +75,7 @@ export function sumFibs(num:number):number {
     console.log(sumOdd)
     return sumOdd + 1;
     }
+
+export function decToBin(num:number):number {
+    return 0
+}
