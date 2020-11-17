@@ -126,8 +126,5 @@ function balancedParanthesis (string) {
     })
     return symbolArray.length === 0
 }
-//Should return true
-const testString1 = '({[]})'
-//Should return false
-const testString2 = '(({[]{]}))'
+
 
