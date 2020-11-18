@@ -1,6 +1,7 @@
 "use strict";
 
 const { syncBuiltinESMExports } = require("module");
+const { mediumblue } = require("color-name");
 
 exports.__esModule = true;
 exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
@@ -126,5 +127,3 @@ function balancedParanthesis (string) {
     })
     return symbolArray.length === 0
 }
-
-
