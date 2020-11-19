@@ -58,6 +58,7 @@ export function foldArray(array:number[], runs:number):number[] {
     return foldedArray
 }
 
+//11 -17-2020 'sumFibs'
 export function sumFibs(num:number):number {
     let start:number = 0;
     let next:number = 1;
@@ -76,6 +77,7 @@ export function sumFibs(num:number):number {
     return sumOdd + 1;
     }
 
+//11-19-2020 '5kyu - Directions Reduction'
 export function dirReduc(arr: string[]):string[] {
     let directionStack:string[] = []
 
