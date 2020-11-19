@@ -98,7 +98,6 @@ export function dirReduc(arr: string[]):string[] {
             directionStack.push(element)
         }
     })
-    console.log(directionStack)
     return directionStack
 }
 
