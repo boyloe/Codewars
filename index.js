@@ -109,3 +109,4 @@ function dirReduc(arr) {
 }
 exports.dirReduc = dirReduc;
 var testArr = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"];
+dirReduc(testArr);
