@@ -76,6 +76,26 @@ export function sumFibs(num:number):number {
     return sumOdd + 1;
     }
 
-export function decToBin(num:number):number {
-    return 0
+export function dirReduc(arr: string[]):string[] {
+    let directionStack:string[] = []
+
+    arr.forEach(( element:string ) => {
+        if (!directionStack) {
+            directionStack.push(element)
+        } else if ( 
+            (element === 'NORTH' && directionStack[directionStack.length - 1] === 'SOUTH') 
+            ||(element === 'SOUTH' && directionStack[directionStack.length - 1] === 'NORTH')
+        ) {
+            directionStack.pop()
+        } else if (
+            (element === 'EAST' && directionStack[directionStack.length - 1] === 'WEST') 
+            ||(element === 'WEST' && directionStack[directionStack.length - 1] === 'EAST')            
+        ){
+            directionStack.pop
+        }
+    })
+    console.log(directionStack)
+    return directionStack
 }
+
+const testArr:string[] = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
