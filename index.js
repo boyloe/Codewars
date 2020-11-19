@@ -103,6 +103,9 @@ function dirReduc(arr) {
             || (element === 'WEST' && directionStack[directionStack.length - 1] === 'EAST')) {
             directionStack.pop;
         }
+        else {
+            directionStack.push(element);
+        }
     });
     console.log(directionStack);
     return directionStack;
