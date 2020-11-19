@@ -1,10 +1,6 @@
 "use strict";
-
-const { syncBuiltinESMExports } = require("module");
-const { mediumblue } = require("color-name");
-
 exports.__esModule = true;
-exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
+exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
 //11-10-2020 'Find the smallest integer 
 function findSmallestInt(args) {
     return args.sort(function (a, b) { return a - b; })[0];
@@ -73,6 +69,7 @@ function foldArray(array, runs) {
     return foldedArray;
 }
 exports.foldArray = foldArray;
+//11 -17-2020 'sumFibs'
 function sumFibs(num) {
     var start = 0;
     var next = 1;
@@ -91,39 +88,24 @@ function sumFibs(num) {
     return sumOdd + 1;
 }
 exports.sumFibs = sumFibs;
-
-//max 2 ^ 16 = 65536
-const decToBin = (num) => {
-    let binaryArray = []
-    for (let i = 16; i >= 0; i--) {
-        if (num >= 2 ** i && num !==0) {
-            num -= 2 ** i
-            binaryArray.push(1)
-        } else if (num === 0){
-            binaryArray.push(0)
-        } else {
-            binaryArray.push(0)
+//11-19-2020 '5kyu - Directions Reduction'
+function dirReduc(arr) {
+    var directionStack = [];
+    arr.forEach(function (element) {
+        if (!directionStack) {
+            directionStack.push(element);
         }
-    }
-    const firstOneIndex = binaryArray.findIndex(number => number === 1)
-    const trimmedArray = binaryArray.slice(firstOneIndex)
-    return trimmedArray.join('')
+        else if ((element === 'NORTH' && directionStack[directionStack.length - 1] === 'SOUTH')
+            || (element === 'SOUTH' && directionStack[directionStack.length - 1] === 'NORTH')) {
+            directionStack.pop();
+        }
+        else if ((element === 'EAST' && directionStack[directionStack.length - 1] === 'WEST')
+            || (element === 'WEST' && directionStack[directionStack.length - 1] === 'EAST')) {
+            directionStack.pop;
+        }
+    });
+    console.log(directionStack);
+    return directionStack;
 }
-
-
-function balancedParanthesis (string) {
-    let symbolArray = []
-    const stringArr = string.split('')
-    stringArr.forEach(character => {
-        if (character === '(' || character ==='{' || character === '['){
-            symbolArray.push(character)
-        } else if (character === ')' && symbolArray[symbolArray.length-1] === '(') {
-            symbolArray.pop()
-        } else if (character === ']' && symbolArray[symbolArray.length-1] === '[') {
-            symbolArray.pop()
-        } else if (character === '}' && symbolArray[symbolArray.length-1] === '{') {
-            symbolArray.pop()
-        } 
-    })
-    return symbolArray.length === 0
-}
+exports.dirReduc = dirReduc;
+var testArr = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"];

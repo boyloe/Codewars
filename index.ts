@@ -101,3 +101,4 @@ export function dirReduc(arr: string[]):string[] {
 }
 
 const testArr:string[] = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
+dirReduc(testArr)
