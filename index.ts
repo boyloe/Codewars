@@ -93,7 +93,7 @@ export function dirReduc(arr: string[]):string[] {
             (element === 'EAST' && directionStack[directionStack.length - 1] === 'WEST') 
             ||(element === 'WEST' && directionStack[directionStack.length - 1] === 'EAST')            
         ){
-            directionStack.pop
+            directionStack.pop()
         } else {
             directionStack.push(element)
         }

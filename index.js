@@ -101,7 +101,7 @@ function dirReduc(arr) {
         }
         else if ((element === 'EAST' && directionStack[directionStack.length - 1] === 'WEST')
             || (element === 'WEST' && directionStack[directionStack.length - 1] === 'EAST')) {
-            directionStack.pop;
+            directionStack.pop();
         }
         else {
             directionStack.push(element);
