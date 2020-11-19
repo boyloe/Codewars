@@ -100,6 +100,3 @@ export function dirReduc(arr: string[]):string[] {
     })
     return directionStack
 }
-
-const testArr:string[] = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
-dirReduc(testArr)
