@@ -121,5 +121,5 @@ export class Challenge {
         return divisibleBy3Or5.reduce(( acc:number, element:number ) => acc + element)
     }
 }
-
+console.log(Challenge.solution(10))
 

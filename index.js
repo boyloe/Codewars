@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
+exports.Challenge = exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
 //11-10-2020 'Find the smallest integer 
 function findSmallestInt(args) {
     return args.sort(function (a, b) { return a - b; })[0];
@@ -107,9 +107,31 @@ function dirReduc(arr) {
             directionStack.push(element);
         }
     });
-    console.log(directionStack);
     return directionStack;
 }
 exports.dirReduc = dirReduc;
-var testArr = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"];
-dirReduc(testArr);
+//11-2020 '6kyu - Multples of 3 or 5'
+var Challenge = /** @class */ (function () {
+    function Challenge() {
+    }
+    Challenge.solution = function (number) {
+        var divisibleBy3Or5 = [];
+        for (var current = 3; current < number; current++) {
+            if (current % 3 === 0 && current % 5 === 0) {
+                divisibleBy3Or5.push(current);
+            }
+            else if (current % 3 === 0) {
+                divisibleBy3Or5.push(current);
+            }
+            else if (current % 5 === 0) {
+                divisibleBy3Or5.push(current);
+            }
+            else {
+                break;
+            }
+        }
+        return divisibleBy3Or5.reduce(function (acc, element) { return acc + element; });
+    };
+    return Challenge;
+}());
+exports.Challenge = Challenge;
