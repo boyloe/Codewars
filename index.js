@@ -127,7 +127,7 @@ var Challenge = /** @class */ (function () {
                 divisibleBy3Or5.push(current);
             }
             else {
-                break;
+                continue;
             }
         }
         return divisibleBy3Or5.reduce(function (acc, element) { return acc + element; });
