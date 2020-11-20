@@ -115,7 +115,7 @@ export class Challenge {
             } else if ( current % 5 === 0 ) {
                 divisibleBy3Or5.push( current )
             } else {
-                break
+                continue
             }
         }        
         return divisibleBy3Or5.reduce(( acc:number, element:number ) => acc + element)
