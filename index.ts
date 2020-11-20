@@ -107,6 +107,10 @@ export function dirReduc(arr: string[]):string[] {
 export class Challenge {
     static solution( number:number ):number {
         const divisibleBy3Or5:number[] = []
+        if (number <= 3) {
+            return 0
+        }
+        console.log(number)
         for  ( let current = 3; current < number; current++ ) {
             if ( current % 3 === 0 && current % 5 === 0 ) {
                 divisibleBy3Or5.push( current )
@@ -121,5 +125,5 @@ export class Challenge {
         return divisibleBy3Or5.reduce(( acc:number, element:number ) => acc + element)
     }
 }
-console.log(Challenge.solution(10))
+
 
