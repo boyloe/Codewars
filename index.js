@@ -135,3 +135,4 @@ var Challenge = /** @class */ (function () {
     return Challenge;
 }());
 exports.Challenge = Challenge;
+console.log(Challenge.solution(10));
