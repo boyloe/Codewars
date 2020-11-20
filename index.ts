@@ -1,3 +1,5 @@
+import { multiply } from "lodash"
+
 //11-10-2020 'Find the smallest integer 
 export function findSmallestInt(args: number[]): number {
     return args.sort((a:number, b:number)=> a-b)[0]
@@ -100,3 +102,24 @@ export function dirReduc(arr: string[]):string[] {
     })
     return directionStack
 }
+
+//11-2020 '6kyu - Multples of 3 or 5'
+export class Challenge {
+    static solution( number:number ):number {
+        const divisibleBy3Or5:number[] = []
+        for  ( let current = 3; current < number; current++ ) {
+            if ( current % 3 === 0 && current % 5 === 0 ) {
+                divisibleBy3Or5.push( current )
+            } else if ( current % 3 === 0 ) {
+                divisibleBy3Or5.push( current )
+            } else if ( current % 5 === 0 ) {
+                divisibleBy3Or5.push( current )
+            } else {
+                break
+            }
+        }        
+        return divisibleBy3Or5.reduce(( acc:number, element:number ) => acc + element)
+    }
+}
+
+
