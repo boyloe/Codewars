@@ -126,4 +126,8 @@ export class Challenge {
     }
 }
 
+export function humanReadable(seconds:number):string {
+
+}
+
 
