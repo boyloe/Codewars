@@ -126,8 +126,10 @@ export class Challenge {
     }
 }
 
+//11-23-2020 '5kyu-Human Readable Time'
 export function humanReadable(seconds:number):string {
-
+    
+    return ''
 }
 
 
