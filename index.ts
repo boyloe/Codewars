@@ -126,10 +126,11 @@ export class Challenge {
     }
 }
 
-//11-23-2020 '5kyu-Human Readable Time'
-export function humanReadable(seconds:number):string {
-    
-    return ''
+//11/25/2020 '6kyu- Which are in'
+export class G964 {
+    public static inArray(a1: string[], a2: string[]): string[] {
+        return ['']
+    }
 }
 
 
