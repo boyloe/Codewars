@@ -143,8 +143,4 @@ export class G964 {
     }
 }
 
-const a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
-const a1 = ["arp", "live", "strong"]
-
-console.log(G964.inArray(a1, a2))
 
