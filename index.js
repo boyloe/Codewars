@@ -159,6 +159,3 @@ var G964 = /** @class */ (function () {
     return G964;
 }());
 exports.G964 = G964;
-var a2 = ["lively", "alive", "harp", "sharp", "armstrong"];
-var a1 = ["arp", "live", "strong"];
-console.log(G964.inArray(a1, a2));
