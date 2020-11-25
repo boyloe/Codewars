@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.Challenge = exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
+exports.G964 = exports.Challenge = exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
 //11-10-2020 'Find the smallest integer 
 function findSmallestInt(args) {
     return args.sort(function (a, b) { return a - b; })[0];
@@ -116,6 +116,10 @@ var Challenge = /** @class */ (function () {
     }
     Challenge.solution = function (number) {
         var divisibleBy3Or5 = [];
+        if (number <= 3) {
+            return 0;
+        }
+        console.log(number);
         for (var current = 3; current < number; current++) {
             if (current % 3 === 0 && current % 5 === 0) {
                 divisibleBy3Or5.push(current);
@@ -135,4 +139,25 @@ var Challenge = /** @class */ (function () {
     return Challenge;
 }());
 exports.Challenge = Challenge;
-console.log(Challenge.solution(10));
+//11/25/2020 '6kyu- Which are in'
+var G964 = /** @class */ (function () {
+    function G964() {
+    }
+    G964.inArray = function (a1, a2) {
+        var substringSet = new Set();
+        a2.forEach(function (outerWord) {
+            a1.forEach(function (innerWord) {
+                if (outerWord.includes(innerWord)) {
+                    substringSet.add(innerWord);
+                }
+            });
+        });
+        var substringArr = Array.from(substringSet);
+        return substringArr;
+    };
+    return G964;
+}());
+exports.G964 = G964;
+var a2 = ["lively", "alive", "harp", "sharp", "armstrong"];
+var a1 = ["arp", "live", "strong"];
+console.log(G964.inArray(a1, a2));

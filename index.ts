@@ -129,8 +129,21 @@ export class Challenge {
 //11/25/2020 '6kyu- Which are in'
 export class G964 {
     public static inArray(a1: string[], a2: string[]): string[] {
-        return ['']
+        const substringSet = new Set<string>()
+        a2.forEach((outerWord:string) => {
+            a1.forEach((innerWord:string) => {
+                if (outerWord.includes(innerWord)) {
+                    substringSet.add(innerWord)
+                }
+            })
+        })
+        const substringArr = Array.from(substringSet)
+        return substringArr
     }
 }
 
+const a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+const a1 = ["arp", "live", "strong"]
+
+console.log(G964.inArray(a1, a2))
 
