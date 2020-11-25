@@ -138,7 +138,8 @@ export class G964 {
             })
         })
         const substringArr = Array.from(substringSet)
-        return substringArr
+        const sortedSubstringArr = substringArr.sort()
+        return sortedSubstringArr
     }
 }
 

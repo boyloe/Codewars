@@ -153,7 +153,8 @@ var G964 = /** @class */ (function () {
             });
         });
         var substringArr = Array.from(substringSet);
-        return substringArr;
+        var sortedSubstringArr = substringArr.sort();
+        return sortedSubstringArr;
     };
     return G964;
 }());
