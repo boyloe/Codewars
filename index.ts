@@ -172,4 +172,3 @@ export function longestConsec(strArr: string[], k: number): string {
     }
 }
 
-console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2))
