@@ -153,13 +153,19 @@ export class G964 {
 //11-26-2020 '6-kyu Consecutive Strings'
 export function longestConsec(strArr: string[], k: number): string {
     const solutionStack:string[] = []
-    let currentWordCombo:string = strArr[0]
+    let largestWordCombo:string = strArr[0]
+    let currentWordCombo:string
     for (let i:number = 0; i <= strArr.length - k; i++) {
         currentWordCombo = strArr.slice(i, i + k).join('')
-        console.log(currentWordCombo)
-    }
-    
-    return "solution"
+        if (currentWordCombo.length > largestWordCombo.length) {
+            largestWordCombo = currentWordCombo
+            solutionStack.length = 0
+            solutionStack.push(largestWordCombo)
+        } else {
+            continue
+        }
+    }    
+    return solutionStack[0]
 }
 
 longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
