@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.G964 = exports.Challenge = exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
+exports.longestConsec = exports.G964 = exports.Challenge = exports.dirReduc = exports.sumFibs = exports.foldArray = exports.tribonacci = exports.Kata = exports.findNeedle = exports.findSmallestInt = void 0;
 //11-10-2020 'Find the smallest integer 
 function findSmallestInt(args) {
     return args.sort(function (a, b) { return a - b; })[0];
@@ -159,3 +159,21 @@ var G964 = /** @class */ (function () {
     return G964;
 }());
 exports.G964 = G964;
+//Clever solution to Which are in
+// export class G964 {
+//     public static inArray(a1: string[], a2: string[]): string[] {
+//       return a1.filter(a => a2.some(b => b.includes(a))).sort();
+//     }
+//   }
+//11-26-2020 '6-kyu Consecutive Strings'
+function longestConsec(strArr, k) {
+    var solutionStack = [];
+    var currentWordCombo = strArr[0];
+    for (var i = 0; i <= strArr.length - k; i++) {
+        currentWordCombo = strArr.slice(i, i + k).join('');
+        console.log(currentWordCombo);
+    }
+    return "solution";
+}
+exports.longestConsec = longestConsec;
+longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2);
