@@ -151,7 +151,7 @@ export class G964 {
 //   }
 
 //11-26-2020 '6-kyu Consecutive Strings'
-export function longestConsec(strarr: string[], k: number): string {
+export function longestConsec(strArr: string[], k: number): string {
     return "solution"
 }
 
