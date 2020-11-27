@@ -168,12 +168,20 @@ exports.G964 = G964;
 //11-26-2020 '6-kyu Consecutive Strings'
 function longestConsec(strArr, k) {
     var solutionStack = [];
-    var currentWordCombo = strArr[0];
+    var largestWordCombo = strArr[0];
+    var currentWordCombo;
     for (var i = 0; i <= strArr.length - k; i++) {
         currentWordCombo = strArr.slice(i, i + k).join('');
-        console.log(currentWordCombo);
+        if (currentWordCombo.length > largestWordCombo.length) {
+            largestWordCombo = currentWordCombo;
+            solutionStack.length = 0;
+            solutionStack.push(largestWordCombo);
+        }
+        else {
+            continue;
+        }
     }
-    return "solution";
+    return solutionStack[0];
 }
 exports.longestConsec = longestConsec;
-longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2);
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2));

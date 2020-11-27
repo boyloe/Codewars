@@ -152,20 +152,24 @@ export class G964 {
 
 //11-26-2020 '6-kyu Consecutive Strings'
 export function longestConsec(strArr: string[], k: number): string {
-    const solutionStack:string[] = []
-    let largestWordCombo:string = strArr[0]
-    let currentWordCombo:string
-    for (let i:number = 0; i <= strArr.length - k; i++) {
-        currentWordCombo = strArr.slice(i, i + k).join('')
-        if (currentWordCombo.length > largestWordCombo.length) {
-            largestWordCombo = currentWordCombo
-            solutionStack.length = 0
-            solutionStack.push(largestWordCombo)
-        } else {
-            continue
-        }
-    }    
-    return solutionStack[0]
+    if (strArr.length === 0 || k > strArr.length || k <= 0){
+        return ''
+    } else {
+        const solutionStack:string[] = ['']
+        let largestWordCombo:string = strArr[0]
+        let currentWordCombo:string
+        for (let i:number = 0; i <= strArr.length - k; i++) {
+            currentWordCombo = strArr.slice(i, i + k).join('')
+            if (currentWordCombo.length > largestWordCombo.length) {
+                largestWordCombo = currentWordCombo
+                solutionStack.length = 0
+                solutionStack.push(largestWordCombo)
+            } else {
+                continue
+            }
+        }    
+        return solutionStack[0]      
+    }
 }
 
-longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2))
