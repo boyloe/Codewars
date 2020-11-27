@@ -152,6 +152,13 @@ export class G964 {
 
 //11-26-2020 '6-kyu Consecutive Strings'
 export function longestConsec(strArr: string[], k: number): string {
+    const solutionStack:string[] = []
+    let currentWordCombo:string
+    for (let i:number = 0; i < strArr.length - k - 1; i++) {
+        currentWordCombo = strArr.slice(i, i + k).join('')
+        console.log(currentWordCombo)
+    }
+    
     return "solution"
 }
 
