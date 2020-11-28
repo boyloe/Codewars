@@ -172,3 +172,7 @@ export function longestConsec(strArr: string[], k: number): string {
     }
 }
 
+//11-28-2020 '5kyu-Closest and Smallest'
+export function closest(strng: string): number[][] {
+    return [[0],[0]]
+}
