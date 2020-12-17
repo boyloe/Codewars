@@ -84,7 +84,7 @@ export function dirReduc(arr: string[]):string[] {
     let directionStack:string[] = []
 
     arr.forEach(( element:string ) => {
-        if (!directionStack) {
+        if (directionStack[0] === undefined) {
             directionStack.push(element)
         } else if ( 
             (element === 'NORTH' && directionStack[directionStack.length - 1] === 'SOUTH') 
@@ -175,4 +175,8 @@ export function longestConsec(strArr: string[], k: number): string {
 //11-28-2020 '5kyu-Closest and Smallest'
 export function closest(strng: string): number[][] {
     return [[20],[20]]
+}
+
+export function sum(a:number,b:number):number { 
+    return a + b
 }
